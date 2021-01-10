@@ -47,3 +47,10 @@ class Node:
     """
     @return the neighbors that this node is their target
     """
+    
+    def toJson(self):
+        pos = self.pos
+        return {'pos':"{},{},{}".format(pos[0],pos[1],pos[2]),'id':self.id}
+    """
+    @return a dict for json 
+    """
