@@ -43,11 +43,22 @@ class Node:
 
     def getDest(self):
         return self.dest
-
     """
     @return the neighbors that this node is their target
     """
-    
+
+    def getDisToSrc(self,key:int):
+        return self.src[key]
+    """
+    *Returns the weight of the edge between this node and the node whom key is @param key.
+    """
+
+    def getDisToDest(self,key:int):
+        return self.dest[key]
+    """
+    *Returns the weight of the edge between node whom key is @param key and this node .
+    """
+
     def toJson(self):
         pos = self.pos
         return {'pos':"{},{},{}".format(pos[0],pos[1],pos[2]),'id':self.id}
