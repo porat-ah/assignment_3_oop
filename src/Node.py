@@ -78,3 +78,7 @@ class Node:
     """
     @return a dict for json 
     """
+
+    def __repr__(self):
+        return "%s: |edges out| %s |edges in| %s" %(self.id, len(self.start_of_edge),len(self.end_of_edge))
+
