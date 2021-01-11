@@ -2,11 +2,12 @@ import json
 import matplotlib.pyplot as plt
 from typing import List
 import numpy as np
-from queue import PriorityQueue
-from queue import Queue
+import pandas as pd
+from queue import PriorityQueue, Queue, LifoQueue
 from src.GraphAlgoInterface import GraphAlgoInterface
 from src.GraphInterface import GraphInterface
 from src.DiGraph import DiGraph
+from src.Node import Node
 
 
 class GraphAlgo(GraphAlgoInterface):
@@ -66,12 +67,8 @@ class GraphAlgo(GraphAlgoInterface):
 		@return: True if the save was successful, False o.w.
 		"""
 	
-	
-	
-	
-	
-	"""
-	graph = self.graph
+	def shortest_path(self, id1: int, id2: int) -> (float, list):
+		graph = self.graph
 		try:
 			graph.get_node(id1)
 			graph.get_node(id2)
@@ -111,9 +108,6 @@ class GraphAlgo(GraphAlgoInterface):
 							q.put((dist, i))
 		except:
 			return (float('inf'), [])
-	"""
-	def shortest_path(self, id1: int, id2: int) -> (float, list):
-		
 		"""
 		Returns the shortest path from node id1 to node id2 using Dijkstra's Algorithm
 		@param id1: The start node id
@@ -139,25 +133,113 @@ class GraphAlgo(GraphAlgoInterface):
 		https://en.wikipedia.org/wiki/Dijkstra's_algorithm
 		"""
 	
+	def DFS(self, node: int) -> Node:
+		counter = 0
+		stack = []
+		stack.insert(0, self.graph.get_node(node))
+		stack[0].setStatus(True)
+		stack[0].setInfo(counter)
+		counter += 1
+		while (len(stack) is not 0):
+			if (not self.hasNext(stack[0])):
+				stack[0].setInfo(counter)
+				poped = stack.pop(0)
+				counter += 1
+				continue
+			stack.insert(0, self.getNext(stack[0]))
+			stack[0].setStatus(True)
+			stack[0].setInfo(counter)
+			counter += 1
+		return poped
+	
+	"""
+	*Implementation of DFS algorithm on a weighted directed graph.
+	"""
+	
+	def hasNext(self, node: Node) -> bool:
+		s = pd.Series(self.graph.all_out_edges_of_node(node.getId()))
+		s = s[s.apply(lambda x: x.status == False)]
+		if (len(s) != 0):
+			return True
+		return False
+	
+	"""
+	*Tells if the received node has a unvisited child.
+	"""
+	
+	def getNext(self, node: Node) -> Node:
+		someOne = Node()
+		s = pd.Series(self.graph.all_out_edges_of_node(node.getId()))
+		s = s[s.apply(lambda x: x.status == False)]
+		if (len(s) != 0):
+			return someOne
+		pass
+	
+	"""
+	*Returns the unvisited child of the recieved node.
+	"""
+	
 	def connected_component(self, id1: int) -> list:
-		graph = self.graph
-		try:
-			s1 = self.BFS(id1)
-			self.graph.setTranspose()
-			s2 = self.BFS(id1)
-			output = []
-			for i in list(s1):
-				for j in list(s2):
-					if (i == j):
-						output.append(i)
-			return output
-		except:
-			return []
-		"""
-			Finds the Strongly Connected Component(SCC) that node id1 is a part of.
-			@param id1: The node id
-			@return: The list of nodes in the SCC
-		"""
+		self.setAllNodeComponentsToDefaultValue()
+		self.DFS(id1)
+		self.fCc()
+		self.get_graph().setTranspose()
+		self.DFS(id1)
+		list = self.listOfConnectedComponent()
+		self.setAllNodeComponentsToDefaultValue()
+		return list
+	
+	"""
+	Finds the Strongly Connected Component(SCC) that node id1 is a part of, using DFS algorithm, then a transposition for the verticies, and then performing another DFS algorithm.
+	@param id1: The node id
+	@return: The list of nodes in the SCC
+	"""
+	
+	def fCc(self):
+		for each in self.get_graph().get_all_v():
+			each.setStatus(not each.getStatus())
+			each.setInfo(-1)
+	
+	"""
+	*After performing the first DFS algorithm run, we need to make sure that in the next running of the DFS algorithm we will check only the components that was declared as "somehow connectd" to recieved node .
+	"""
+	
+	def setAllNodeComponentsToDefaultValue(self):
+		for each in self.get_graph().get_all_v():
+			each.setStatus(False)
+			each.setInfo(-1)
+		pass
+	
+	"""
+	*Sets all the status and info parameters of each node to its default value .
+	"""
+	
+	def listOfConnectedComponent(self) -> list:
+		list = []
+		for each in self.get_graph().get_all_v():
+			if (each.getInfo() != -1):
+				list.append(each)
+		return list
+	
+	"""
+	*Returns a list of all the connected components .
+	"""
+	
+	# """
+	# graph = self.graph
+	# 	try:
+	# 		s1 = self.BFS(id1)
+	# 		self.graph.setTranspose()
+	# 		s2 = self.BFS(id1)
+	# 		output = []
+	# 		for i in list(s1):
+	# 			for j in list(s2):
+	# 				if (i == j):
+	# 					output.append(i)
+	# 		return output
+	# 	except:
+	# 		return []
+	# """
 	
 	def BFS(self, id1):
 		q = Queue()
