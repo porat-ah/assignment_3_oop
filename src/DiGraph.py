@@ -1,5 +1,5 @@
-from src.GraphInterface import GraphInterface
-from src.Node import Node
+from GraphInterface import GraphInterface
+from Node import Node
 
 class DiGraph(GraphInterface):
     def __init__(self):
@@ -7,7 +7,6 @@ class DiGraph(GraphInterface):
         self.edgeSize = 0
         self.nodes = {}
         self.transpose = False
-        pass
 
     def getTranspose(self):
         return self.transpose
@@ -18,7 +17,6 @@ class DiGraph(GraphInterface):
 
     def setTranspose(self):
         self.transpose = not self.transpose
-        pass
 
     # """
     #     *Set transposition status.
@@ -48,12 +46,12 @@ class DiGraph(GraphInterface):
     def all_in_edges_of_node(self, id1: int) -> dict:
         if (self.transpose):
             try:
-                return self.nodes[id1].getSrc()
+                return self.nodes[id1].getStart()
             except:
                 raise ValueError
         else:
             try:
-                return self.nodes[id1].getDest()
+                return self.nodes[id1].getEnd()
             except:
                 raise ValueError
 
@@ -64,12 +62,12 @@ class DiGraph(GraphInterface):
     def all_out_edges_of_node(self, id1: int) -> dict:
         if (self.transpose):
             try:
-                return self.nodes[id1].getDest()
+                return self.nodes[id1].getEnd()
             except:
                 raise ValueError
         else:
             try:
-                return self.nodes[id1].getSrc()
+                return self.nodes[id1].getStart()
             except:
                 raise ValueError
 
@@ -87,11 +85,23 @@ class DiGraph(GraphInterface):
 
     def add_edge(self, id1: int, id2: int, weight: float) -> bool:
         try:
-            if (self.nodes[id1].getDisToDest(id2) == weight):
+            self.nodes[id1]
+            self.nodes[id2]
+            if(id1 == id2):
                 return False
-            self.nodes[id1].setDest(id2, weight)
-            self.mc += 1
-            return True
+            try:
+                if (self.nodes[id1].getDisToStart(id2) == weight):
+                    return False
+                self.nodes[id1].setStart(id2, weight)
+                self.nodes[id2].setEnd(id1, weight)
+                self.mc += 1
+                return True
+            except:
+                self.nodes[id1].setStart(id2, weight)
+                self.nodes[id2].setEnd(id1, weight)
+                self.mc += 1
+                self.edgeSize += 1
+                return True
         except:
             return False
 
@@ -119,28 +129,14 @@ class DiGraph(GraphInterface):
     #     @return: True if the node was added successfully, False o.w.
     # """
 
-    def remove_node(self, node_id: int) -> bool:
-        if (node_id not in self.nodes):
-            return False
-        for edgeTo in self.all_in_edges_of_node(node_id):
-            self.remove_edge(edgeTo, node_id)
-        for edgeFrom in self.all_out_edges_of_node(node_id):
-            self.remvoe_edge(edgeFrom, node_id)
-        self.nodes.pop(node_id)
-        return True
-
-    # """
-    #     Removes a node from the graph.
-    #     @param node_id: The node ID
-    #     @return: True if the node was removed successfully, False o.w.
-    # """
-
     def remove_edge(self, node_id1: int, node_id2: int) -> bool:
         if (node_id1 not in self.nodes or node_id2 not in self.nodes):
             return False
-        if (node_id1 in self.nodes[node_id2].getSrc()):
-            self.nodes[node_id1].getDest().pop(node_id2)
-            self.nodes[node_id2].getSrc().pop(node_id1)
+        if (node_id2 in self.nodes[node_id1].getStart()):
+            self.nodes[node_id1].removeStart(node_id2)
+            self.nodes[node_id2].removeEnd(node_id1)
+            self.edgeSize -= 1
+            self.mc += 1
             return True
         return True
 
@@ -151,25 +147,28 @@ class DiGraph(GraphInterface):
     #     @return: True if the edge was removed successfully, False o.w.
     # """
 
+    def remove_node(self, node_id: int) -> bool:
+        if (node_id not in self.nodes):
+            return False
+        EdgesTo = list(self.all_in_edges_of_node(node_id).keys())
+        for edgeTo in EdgesTo:
+            self.remove_edge(edgeTo, node_id)
+        EdgesFrom = list(self.all_out_edges_of_node(node_id).keys())
+        for edgeFrom in EdgesFrom:
+            self.remove_edge(node_id,edgeFrom)
+        del self.nodes[node_id]
+        self.mc += 1
+        return True
 
+    # """
+    #     Removes a node from the graph.
+    #     @param node_id: The node ID
+    #     @return: True if the node was removed successfully, False o.w.
+    # """
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
+    def get_node(self,node_id):
+        try:
+            return self.nodes[node_id]
+        except:
+            print("node does not exist")
+            pass

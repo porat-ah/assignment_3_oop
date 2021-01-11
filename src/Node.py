@@ -1,12 +1,13 @@
 class Node:
     def __init__(self, i: int):
         self.id = i
-        self.pos = (0.0, 0.0, 0.0)
-        self.dest = {}  # a dict of all edges where this node is in the end of the edge
-        self.src = {}  # a dict of all edges where this node is in the start of the edge
+        self.pos = None
+        self.end_of_edge = {}  # a dict of all edges where this node is in the end of the edge
+        self.start_of_edge = {}  # a dict of all edges where this node is in the start of the edge
 
     def setPos(self, x):
-        self.pos = x
+        if(self.pos == None):
+            self.pos = x
     """
     set the position of the node
     """
@@ -22,41 +23,53 @@ class Node:
     @return the position of the node
     """
 
-    def setSrc(self, id, w):
-        self.src.update({id: w})
+    def setStart(self, id, w):
+        self.start_of_edge.update({id: w})
         """
         add an edge to the list of all edges where this node is their src
         """
 
-    def setDest(self, id, w):
-        self.dest.update({id: w})
+    def setEnd(self, id, w):
+        self.end_of_edge.update({id: w})
         """
         add an edge to the list of all edges where this node is their dest
         """
-
-    def getSrc(self):
-        return self.src
+    def removeStart(self,id):
+        del self.start_of_edge[id]
+    """
+    remove an edge where the given id is in the end of it and this object at the start
+    """
+        
+        
+    def removeEnd(self,id):
+        del self.end_of_edge[id]
+        
+    """
+    remove an edge where this object is in the end of it and the given id at the start
+    """
+    def getStart(self):
+        return self.start_of_edge
 
     """
     @return the neighbors that this node is their src
     """
 
-    def getDest(self):
-        return self.dest
+    def getEnd(self):
+        return self.end_of_edge
     """
     @return the neighbors that this node is their target
     """
 
-    def getDisToSrc(self,key:int):
-        return self.src[key]
+    def getDisToStart(self,key:int):
+        return self.start_of_edge[key]
     """
-    *Returns the weight of the edge between this node and the node whom key is @param key.
+    @returns the weight of the edge between this node and the node whom key is @param key.
     """
 
-    def getDisToDest(self,key:int):
-        return self.dest[key]
+    def getDisToEnd(self,key:int):
+        return self.end_of_edge[key]
     """
-    *Returns the weight of the edge between node whom key is @param key and this node .
+    @returns the weight of the edge between node whom key is @param key and this node .
     """
 
     def toJson(self):
