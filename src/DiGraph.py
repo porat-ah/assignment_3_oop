@@ -4,6 +4,7 @@ from Node import Node
 
 class DiGraph(GraphInterface):
 	pass
+	
 	def __init__(self):
 		self.mc = 0
 		self.edgeSize = 0
@@ -114,13 +115,12 @@ class DiGraph(GraphInterface):
 	#     @param weight: The weight of the edge
 	#     @return: True if the edge was added successfully, False o.w.
 	# """
-	# {0: 0: | edges out | 1 | edges in | 1, 1: 1: | edges out | 3 | edges in | 1, 2: 2: | edges out | 1 | edges in | 1, 3: 3: | edges out | 0 | edges in | 2}
 	def add_node(self, node_id: int, pos: tuple = None) -> bool:
 		if (node_id in self.nodes):
 			return False
 		node = Node(node_id)
 		node.setPos(pos)
-		self.nodes.update({node_id:node})
+		self.nodes.update({node_id: node})
 		self.mc += 1
 		return True
 	

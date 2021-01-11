@@ -199,6 +199,7 @@ class GraphAlgo(GraphAlgoInterface):
 		for each in self.get_graph().get_all_v():
 			each.setStatus(not each.getStatus())
 			each.setInfo(-1)
+		pass
 	
 	"""
 	*After performing the first DFS algorithm run, we need to make sure that in the next running of the DFS algorithm we will check only the components that was declared as "somehow connectd" to recieved node .
