@@ -1,11 +1,11 @@
-from src import DiGraph ,GraphAlgoInterface , GraphInterface
 import json
 import matplotlib
 from typing import List
 
+from src.GraphAlgoInterface import GraphAlgoInterface
+from src.GraphInterface import GraphInterface
 
 class GraphAlgo (GraphAlgoInterface):
-    
     def __init__(self,g):
         self.graph = g
 
