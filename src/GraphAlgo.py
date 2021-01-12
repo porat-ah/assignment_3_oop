@@ -175,14 +175,10 @@ class GraphAlgo(GraphAlgoInterface):
     """
 
     def getNext(self, node: Node) -> Node:
-        someOne = Node()
         edges = self.graph.all_out_edges_of_node(node.getId())
-        s = []
         for i in edges:
             if (not self.graph.get_node(i).getStatus()):
-                s.append(i)
-        if (len(s) != 0):
-            return someOne
+                self.graph.get_node(i)
         pass
 
     """

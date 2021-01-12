@@ -73,7 +73,7 @@ class TestGraphAlgo(unittest.TestCase):
 
     def test_plot_graph(self):
         ag = GraphAlgo()
-        #ag.load_from_json("G_10_80_1.json")
+        #ag.load_from_json("G_1000_8000_1.json")
         #ag.load_from_json("G_10_80_0.json")
         #ag.load_from_json("A0")
         ag.plot_graph()
