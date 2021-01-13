@@ -1,4 +1,4 @@
-#OOP Course Exercise 3.
+# OOP Course Exercise 3 .
 
 The following project represents a data structure for a directed-weighted graph data structure, which uses python dictionary data structure to achieve O(1) complexity for searching and inputting specific nodes.
 
@@ -13,7 +13,7 @@ The main 2 classes DiGraph and GraphAlgo and the implementing GraphInterface and
 
 The project was created on Python interpreter version 3.8.
 
-#Downloading and running.
+# Downloading and running.
 ## Linux 
 
 Please make sure that your Python interpreter version is 3.8 or higher, if not simply install it by following the instructions in the following: link: https://tecadmin.net/install-python-3-8-ubuntu/.
