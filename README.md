@@ -2,7 +2,7 @@
 
 The following project represents a data structure for a directed-weighted graph data structure, which uses python dictionary data structure to achieve O(1) complexity for searching and inputting specific nodes.
 
-Additionally, the project contains 3 ‫UnitTests tests to test (:drums:)  each class we've created - Node, DiGraph, and GraphAlgo.
+Additionally, the project contains 3 ‫UnitTests tests to test :drums:  each class we've created - Node, DiGraph, and GraphAlgo.
 
 The basic implementation of the graph is classic through using a dictionary data structure to achieve O(1) complexity for searching and inputting specific nodes. Each node is a class by itself which contains 2 dictionary data structures one for all edges where this node is at the end of the edge and one for all edges where this node is at the start of the edge. The Algorithm class is implementing very known algorithms like Dijkstra, DFS, and SCC algorithm mainly based on Tarjan's strongly connected components algorithm plus all the required by the interface algorithms like saving and loading the graph as a JSON file. More info you can find in the project's wiki.
 
