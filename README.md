@@ -1,5 +1,7 @@
 # OOP Course Exercise 3 .
 
+## Description.
+
 The following project represents a data structure for a directed-weighted graph data structure, which uses python dictionary data structure to achieve O(1) complexity for searching and inputting specific nodes.
 
 Additionally, the project contains 3 ‫UnitTests tests to test (:drum:)  each class we've created - Node, DiGraph, and GraphAlgo.
