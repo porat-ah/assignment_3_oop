@@ -104,6 +104,8 @@ class GraphAlgo(GraphAlgoInterface):
                         return output
                     edges = graph.all_out_edges_of_node(_id)
                     for i, w in edges.items():
+                        if (i in visited):
+                            continue
                         dist = weight[_id]
                         dist += w
                         if (weight.__contains__(i)):
