@@ -33,7 +33,7 @@ git clone https://github.com/porat-ah/assignment_3_oop.git
 
 5) Enjoy!
 
-## Windows
+## Windows.
 
 Please make sure that your Python interpreter version is 3.8 or higher, if not simply install it by following the instructions in the following link: https://www.python.org/downloads/.
 
