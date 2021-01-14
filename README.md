@@ -17,6 +17,9 @@
         <li class="Box-row">
           <strong><a class="d-block" href="/https://github.com/porat-ah/assignment_3_oop/wiki/code-time-comparison-shortest-path">code time comparison shortest path</a></strong>
         </li>
+         <li class="Box-row">
+          <strong><a class="d-block" href="https://github.com/porat-ah/assignment_3_oop/wiki/Simple-Code">Simple Code</a></strong>
+        </li>
         <li class="Box-row">
           <strong><a class="d-block" href="https://github.com//porat-ah/assignment_3_oop/wiki/Dijkstra&#39;s-shortest-path-algorithm">Dijkstra&#39;s shortest path algorithm</a></strong>
         </li>
