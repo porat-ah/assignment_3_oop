@@ -41,12 +41,11 @@ The main 2 classes DiGraph and GraphAlgo and the implementing GraphInterface and
 
 The project was created on Python interpreter version 3.8.
 
-## Grpahs:
-### this is the graph of the file A4 in the folder "data" :
+## GUI:
+### Visualization of A4 file in the "data" folder:
 ![A4](https://github.com/porat-ah/assignment_3_oop/blob/main/src/A4.png)
 
-### this is the graph of comparison java, python, networkx on the runtime for the function 'shortest path' :  
-
+### Comparison of Java, Python, NetworkX on the runtime for the function "shortest path" :  
 ![shortest path](https://github.com/porat-ah/assignment_3_oop/blob/main/comparison/shortest_path.png)
 
 ## Downloading and running.
@@ -60,11 +59,7 @@ Please make sure that your Python interpreter version is 3.8 or higher, if not s
 git clone https://github.com/porat-ah/assignment_3_oop.git
 
 ```
-3) Make sure you have Pycharm.
-
-4) Enter the project file using Pycharm.
-
-5) Enjoy!
+3) Enjoy!
 
 ### Windows.
 Please make sure that your Python interpreter version is 3.8 or higher, if not simply install it by following the instructions in the following link: https://www.python.org/downloads/.
@@ -76,11 +71,8 @@ Please make sure that your Python interpreter version is 3.8 or higher, if not s
 git clone https://github.com/porat-ah/assignment_3_oop.git
 
 ```
-3) Make sure you have Pycharm.
 
-4) Enter the project file using Pycharm.
-
-5) Enjoy!
+3) Enjoy!
 
 
 
