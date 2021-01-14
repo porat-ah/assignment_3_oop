@@ -78,7 +78,7 @@ git clone https://github.com/porat-ah/assignment_3_oop.git
 
 
 
+<div align = "center"> #####                                                                                                                              Authors: VictoKu1 and porat-ah.
+</div>
 
 
-
-#####                                                                                                                              Authors: VictoKu1 and porat-ah.
