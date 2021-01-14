@@ -71,7 +71,6 @@ Please make sure that your Python interpreter version is 3.8 or higher, if not s
 git clone https://github.com/porat-ah/assignment_3_oop.git
 
 ```
-
 3) Enjoy!
 
 
