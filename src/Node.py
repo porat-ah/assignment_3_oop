@@ -51,10 +51,19 @@ class Node:
 		y = pos[1] * size * 10
 		z = pos[2] * size * 10
 		self.pos = (x, y, z)
+
 	
 	"""
 	*Increases each parameter in the tuple by 10*[inputted parameter]size .
 	"""
+
+	def dicPos(self, size):
+		pos = self.pos
+		x = pos[0] /( size * 10)
+		y = pos[1] /( size * 10)
+		z = pos[2] / (size * 10)
+		self.pos = (x, y, z)
+
 	
 	def getId(self):
 		return self.id

@@ -277,6 +277,8 @@ class GraphAlgo(GraphAlgoInterface):
 		dy = (max_y - min_y) / 10
 		ax.set_ylim(min_y - dy, max_y + dy)
 		ax.set_xlim(min_x - dx, max_x + dx)
+		for node in nodes:
+			node.dicPos(size)
 		plt.show()
 		
 		"""
