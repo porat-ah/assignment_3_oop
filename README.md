@@ -41,6 +41,14 @@ The main 2 classes DiGraph and GraphAlgo and the implementing GraphInterface and
 
 The project was created on Python interpreter version 3.8.
 
+## Grpahs:
+### this is the graph of the file A4 in the folder "data" :
+![A4](https://github.com/porat-ah/assignment_3_oop/blob/main/src/A4.png)
+
+### this is the graph of comparison java, python, networkx on the runtime for the function 'shortest path' :  
+
+![shortest path](https://github.com/porat-ah/assignment_3_oop/blob/main/comparison/shortest_path.png)
+
 ## Downloading and running.
 ### Linux.
 Please make sure that your Python interpreter version is 3.8 or higher, if not simply install it by following the instructions in the following: link: https://tecadmin.net/install-python-3-8-ubuntu/.
