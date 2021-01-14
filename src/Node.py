@@ -51,9 +51,11 @@ class Node:
 		y = pos[1] * size * 10
 		z = pos[2] * size * 10
 		self.pos = (x, y, z)
+	
 	"""
 	*Increases each parameter in the tuple by 10*[inputted parameter]size .
 	"""
+	
 	def getId(self):
 		return self.id
 	

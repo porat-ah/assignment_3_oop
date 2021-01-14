@@ -170,8 +170,3 @@ class DiGraph(GraphInterface):
 	"""
 		*Returns a printable representation of the graph |V|- number of vertices in the graph, |E|- number of edges in the graph.
 	"""
-	
-	
-	
-	
-	
