@@ -1,5 +1,5 @@
 import networkx as nx
-
+import json
 
 def load_from_json(file_name: str):
         graph = nx.DiGraph()
