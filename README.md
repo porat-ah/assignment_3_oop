@@ -3,13 +3,13 @@
 ## Wiki Contents.
 <ul class="m-0 p-0 list-style-none" data-filterable-for="wiki-pages-filter" data-filterable-type="substring" data-pjax>
         <li class="Box-row">
-          <strong><a class="d-block" a href="https://github.com/porat-ah/assignment_3_oop/wiki">Home</a></strong>
+          <strong><a class="d-block" href="https://github.com/porat-ah/assignment_3_oop/wiki">Home</a></strong>
         </li>
         <li class="Box-row">
-          <strong><a class="d-block" a href="https://github.com/porat-ah/assignment_3_oop/wiki/code-time-comparison">code time comparison</a></strong>
+          <strong><a class="d-block" href="https://github.com/porat-ah/assignment_3_oop/wiki/code-time-comparison">code time comparison</a></strong>
         </li>
         <li class="Box-row">
-          <strong><a class="d-block"  a href="https://github.com/porat-ah/assignment_3_oop/wiki/code-time-comparison-Connected-Component">code time comparison Connected Component</a></strong>
+          <strong><a class="d-block" href="https://github.com/porat-ah/assignment_3_oop/wiki/code-time-comparison-Connected-Component">code time comparison Connected Component</a></strong>
         </li>
         <li class="Box-row">
           <strong><a class="d-block" href="https://github.com//porat-ah/assignment_3_oop/wiki/code-time-comparison-Connected-Components">code time comparison Connected Components</a></strong>
@@ -83,5 +83,3 @@ git clone https://github.com/porat-ah/assignment_3_oop.git
 
 
 ##### <div align = "right">Authors: VictoKu1 and porat-ah.</div>
-
-
