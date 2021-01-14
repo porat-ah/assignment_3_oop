@@ -92,6 +92,8 @@ class DiGraph(GraphInterface):
 			if (id1 == id2):
 				return False
 			try:
+				if(id2 in self.nodes[id1].getStart()):
+					return False
 				self.nodes[id1].setStart(id2, weight)
 				self.nodes[id2].setEnd(id1, weight)
 				self.mc += 1
@@ -140,8 +142,8 @@ class DiGraph(GraphInterface):
 		EdgesTo = list(self.all_in_edges_of_node(node_id).keys())
 		for edgeTo in EdgesTo:
 			self.remove_edge(edgeTo, node_id)
+			self.mc -= 1
 		EdgesFrom = list(self.all_out_edges_of_node(node_id).keys())
-		counter = 0
 		for edgeFrom in EdgesFrom:
 			self.remove_edge(node_id, edgeFrom)
 			self.mc -= 1
