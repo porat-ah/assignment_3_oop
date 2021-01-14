@@ -6,26 +6,26 @@
           <strong><a class="d-block" href="https://github.com/porat-ah/assignment_3_oop/wiki">Home</a></strong>
         </li>
         <li class="Box-row">
-          <strong><a class="d-block" href="https://github.com/porat-ah/assignment_3_oop/wiki/code-time-comparison">code time comparison</a></strong>
+          <strong><a class="d-block" href="https://github.com//porat-ah/assignment_3_oop/wiki/Interface">Interface</a></strong>
         </li>
         <li class="Box-row">
-          <strong><a class="d-block" href="https://github.com/porat-ah/assignment_3_oop/wiki/code-time-comparison-Connected-Component">code time comparison Connected Component</a></strong>
+          <strong><a class="d-block" href="https://github.com/porat-ah/assignment_3_oop/wiki/code-time-comparison">Code time comparison</a></strong>
         </li>
         <li class="Box-row">
-          <strong><a class="d-block" href="https://github.com//porat-ah/assignment_3_oop/wiki/code-time-comparison-Connected-Components">code time comparison Connected Components</a></strong>
+          <strong><a class="d-block" href="https://github.com/porat-ah/assignment_3_oop/wiki/code-time-comparison-Connected-Component">Code time comparison Connected Component</a></strong>
         </li>
         <li class="Box-row">
-          <strong><a class="d-block" href="/https://github.com/porat-ah/assignment_3_oop/wiki/code-time-comparison-shortest-path">code time comparison shortest path</a></strong>
+          <strong><a class="d-block" href="https://github.com//porat-ah/assignment_3_oop/wiki/code-time-comparison-Connected-Components">Code time comparison Connected Components</a></strong>
+        </li>
+        <li class="Box-row">
+          <strong><a class="d-block" href="/https://github.com/porat-ah/assignment_3_oop/wiki/code-time-comparison-shortest-path">Code time comparison shortest path</a></strong>
         </li>
          <li class="Box-row">
           <strong><a class="d-block" href="https://github.com/porat-ah/assignment_3_oop/wiki/Simple-Code">Simple Code</a></strong>
         </li>
         <li class="Box-row">
-          <strong><a class="d-block" href="https://github.com//porat-ah/assignment_3_oop/wiki/Dijkstra&#39;s-shortest-path-algorithm">Dijkstra&#39;s shortest path algorithm</a></strong>
-        </li>
-        <li class="Box-row">
-          <strong><a class="d-block" href="https://github.com//porat-ah/assignment_3_oop/wiki/Interface">Interface</a></strong>
-        </li>
+          <strong><a class="d-block" href="https://github.com//porat-ah/assignment_3_oop/wiki/Dijkstra&#39;s-shortest-path-algorithm">Dijkstra&#39;s shortest path algorithm</a></strong> 
+        </li>         
     </ul>
 
 
