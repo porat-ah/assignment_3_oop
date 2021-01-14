@@ -1,5 +1,31 @@
 # OOP Course Exercise 3 .
 
+## Wiki Contents.
+<ul class="m-0 p-0 list-style-none" data-filterable-for="wiki-pages-filter" data-filterable-type="substring" data-pjax>
+        <li class="Box-row">
+          <strong><a class="d-block" href="/porat-ah/assignment_3_oop/wiki">Home</a></strong>
+        </li>
+        <li class="Box-row">
+          <strong><a class="d-block" href="/porat-ah/assignment_3_oop/wiki/code-time-comparison">code time comparison</a></strong>
+        </li>
+        <li class="Box-row">
+          <strong><a class="d-block" href="/porat-ah/assignment_3_oop/wiki/code-time-comparison-Connected-Component">code time comparison Connected Component</a></strong>
+        </li>
+        <li class="Box-row">
+          <strong><a class="d-block" href="/porat-ah/assignment_3_oop/wiki/code-time-comparison-Connected-Components">code time comparison Connected Components</a></strong>
+        </li>
+        <li class="Box-row">
+          <strong><a class="d-block" href="/porat-ah/assignment_3_oop/wiki/code-time-comparison-shortest-path">code time comparison shortest path</a></strong>
+        </li>
+        <li class="Box-row">
+          <strong><a class="d-block" href="/porat-ah/assignment_3_oop/wiki/Dijkstra&#39;s-shortest-path-algorithm">Dijkstra&#39;s shortest path algorithm</a></strong>
+        </li>
+        <li class="Box-row">
+          <strong><a class="d-block" href="/porat-ah/assignment_3_oop/wiki/Interface">Interface</a></strong>
+        </li>
+    </ul>
+
+
 ## Description.
 
 The following project represents a data structure for a directed-weighted graph data structure, which uses python dictionary data structure to achieve O(1) complexity for searching and inputting specific nodes.
@@ -49,3 +75,11 @@ git clone https://github.com/porat-ah/assignment_3_oop.git
 4) Enter the project file using Pycharm.
 
 5) Enjoy!
+
+
+
+
+
+
+
+#####Authors: VictoKu1 and porat-ah .
