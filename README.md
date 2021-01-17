@@ -18,7 +18,7 @@
           <strong><a class="d-block" href="https://github.com//porat-ah/assignment_3_oop/wiki/code-time-comparison-Connected-Components">Code time comparison Connected Components</a></strong>
         </li>
         <li class="Box-row">
-          <strong><a class="d-block" href="/https://github.com/porat-ah/assignment_3_oop/wiki/code-time-comparison-shortest-path">Code time comparison shortest path</a></strong>
+          <strong><a class="d-block" href="https://github.com/porat-ah/assignment_3_oop/wiki/Code-time-comparison-shortest-path">Code time comparison shortest path</a></strong>
         </li>
          <li class="Box-row">
           <strong><a class="d-block" href="https://github.com/porat-ah/assignment_3_oop/wiki/Simple-Code">Simple Code</a></strong>
